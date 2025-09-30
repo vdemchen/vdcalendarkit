@@ -42,10 +42,24 @@ public struct VDCalendarView: View {
 	Text("test").sheet(isPresented: .constant(true)) {
 		var calendar = Calendar.current
 		calendar.locale = Locale(identifier: "uk_UA")
-		let manager = VDCalendarManager(calendar: calendar, scrollDirection: .vertical)
+		let manager = VDCalendarManager(selectionMode: .range, calendar: calendar, scrollDirection: .horizontal, dateRestriction: .allAvailable)
 		manager.dataSource = testProvider
 		return NavigationStack {
 			VDCalendarView(manager: manager)
+				.navigationTitle("Calendar Horizontal")
+				.navigationBarTitleDisplayMode(.large)
+				.onAppear {
+					manager.setup()
+				}
+				.toolbar {
+					ToolbarItem(placement: .topBarTrailing) {
+						Button {
+							manager.reset()
+						} label: {
+							Text("Скинути")
+						}
+					}
+				}
 		}
 	}
 }

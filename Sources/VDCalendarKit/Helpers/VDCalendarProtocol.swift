@@ -36,7 +36,7 @@ public protocol GradientProtocol {
 final class TestCountsProvider: VDCalendarCountsDataSource {
 	func getActionButtonText(for selectionMode: VDSelectionMode, count: Int) -> String? {
 		if selectionMode == .range {
-			return "Test Range \(count)"
+			return count == .zero ? nil : "Test Range \(count)"
 		}
 		return nil
 	}

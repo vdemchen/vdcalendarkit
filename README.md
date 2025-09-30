@@ -1,14 +1,38 @@
 # VDCalendarKit
 
-[![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![iOS](https://img.shields.io/badge/iOS-16.0+-blue.svg)](https://www.apple.com/ios/)
 [![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **VDCalendarKit** is a powerful and flexible SwiftUI calendar component library designed for iOS 16+ applications. It provides both horizontal and vertical calendar layouts with extensive customization options, multiple selection modes, date restrictions, and action button support.
 
+## Demo
+
+<table>
+  <tr>
+    <td width="25%" style="padding: 0 10px;">
+      <img src="ExampleImages/calendar_verical.gif" width="100%"/>
+      <p align="center"><b>Vertical Calendar</b><br/>Range selection with action button</p>
+    </td>
+    <td width="25%" style="padding: 0 10px;">
+      <img src="ExampleImages/calendar_horizaontal_all.gif" width="100%"/>
+      <p align="center"><b>Horizontal - All Dates</b><br/>Single date selection</p>
+    </td>
+    <td width="25%" style="padding: 0 10px;">
+      <img src="ExampleImages/calendar_horizaontal_past_only.gif" width="100%"/>
+      <p align="center"><b>Horizontal - Past Only</b><br/>Only past dates selectable</p>
+    </td>
+    <td width="25%" style="padding: 0 10px;">
+      <img src="ExampleImages/calendar_horizaontal_future_only.gif" width="100%"/>
+      <p align="center"><b>Horizontal - Future Only</b><br/>Only future dates selectable</p>
+    </td>
+  </tr>
+</table>
+
 ## Table of Contents
 
+- [Demo](#demo)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
