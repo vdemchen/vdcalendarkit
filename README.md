@@ -52,8 +52,8 @@
 - [Architecture](#architecture)
 - [Examples](#examples)
 - [Contributing](#contributing)
-- [License](#license)
 - [Author](#author)
+- [License](#license)
 
 ## Features
 
@@ -83,18 +83,32 @@
 
 ### Swift Package Manager
 
-Add VDCalendarKit to your project via Swift Package Manager. In Xcode, go to **File → Add Package Dependencies** and enter:
+In Xcode: **File → Add Package Dependencies…** and enter the repository URL:
 
 ```
-https://github.com/vdemchen/VDCalendarKit.git
+https://github.com/vdemchen/vdcalendarkit.git
 ```
 
-Or add it to your `Package.swift` file:
+Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/vdemchen/VDCalendarKit.git", from: "1.0.0")
+    .package(url: "https://github.com/vdemchen/vdcalendarkit.git", from: "1.0.0")
+],
+targets: [
+    .target(
+        name: "YourTarget",
+        dependencies: [
+            .product(name: "VDCalendarKit", package: "vdcalendarkit")
+        ]
+    )
 ]
+```
+
+Then import the module:
+
+```swift
+import VDCalendarKit
 ```
 
 ## Quick Start
@@ -695,8 +709,8 @@ Contributions are welcome! Please follow these guidelines:
 
 ```bash
 # Clone the repository
-git clone https://github.com/vdemchen/VDCalendarKit.git
-cd VDCalendarKit
+git clone https://github.com/vdemchen/vdcalendarkit.git
+cd vdcalendarkit
 
 # Build the package
 swift build
@@ -713,40 +727,13 @@ swift test
 - Update documentation for public APIs
 - Include unit tests for new features
 
-## License
-
-VDCalendarKit is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
-
-```
-MIT License
-
-Copyright (c) 2025 Vladyslav Demchenko
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
 ## Author
 
-**Vladyslav Demchenko**
+**Vladyslav Demchenko** · [@vdemchen](https://github.com/vdemchen)
 
-- GitHub: [@vdemchen](https://github.com/vdemchen)
-- Email: vdemchen@gmail.com
+## License
+
+VDCalendarKit is available under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Support
 
